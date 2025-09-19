@@ -1,0 +1,67 @@
+<style>
+  .completed {
+    text-decoration: line-through;
+    color: gray;
+  }
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <style>
+    .completed {
+      text-decoration: line-through;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <h1>My To-Do List</h1>
+  <input type="text" id="taskInput" placeholder="Add a new task">
+  <button id="addBtn">Add Task</button>
+  <ul id="tasklist"></ul>
+
+  <script>
+    const taskInput = document.getElementById('taskInput');
+    const addBtn = document.getElementById('addBtn');
+    const tasklist = document.getElementById('tasklist');
+
+    addBtn.addEventListener('click', addTask);
+
+    function addTask() {
+      const tasktext = taskInput.value.trim();
+      if (tasktext === "") {
+        alert("Please enter a task");
+        return;
+      }
+
+      const li = document.createElement('li');
+      const span = document.createElement('span');
+      span.textContent = tasktext;
+
+      const tickBtn = document.createElement('button');
+      tickBtn.textContent = '✓';
+      tickBtn.className = 'tickBtn';
+      tickBtn.addEventListener('click', () => {
+        span.classList.toggle('completed');
+      });
+
+      const delBtn = document.createElement('button');
+      delBtn.textContent = 'Delete';
+      delBtn.className = 'delBtn';
+      delBtn.addEventListener('click', () => {
+        tasklist.removeChild(li);
+      });
+
+      li.appendChild(span);
+      li.appendChild(tickBtn);
+      li.appendChild(delBtn);
+      tasklist.appendChild(li);
+
+      taskInput.value = ""; // Clear input after adding
+    }
+  </script>
+</body>
+</html>
