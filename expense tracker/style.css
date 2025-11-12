@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  padding: 20px;
+}
+h2 {
+  text-align: center;
+}
+.container {
+  max-width: 700px;
+  margin: auto;
+  background: rgb(232, 206, 206);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(233, 225, 225, 0.2);
+}7+
+input, button {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+button {
+  background: #4CAF50;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover {
+  background: #45a049;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+th, td {
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 8px;
+}
+th {
+  background: #4CAF50;
+  color: white;
+}
+.total {
+  text-align: right;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.search-filter {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.search-filter input {
+  flex: 1;
+}
