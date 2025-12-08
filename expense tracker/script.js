@@ -8,7 +8,7 @@ function addExpense() {
 
   if (!name || !amount || !date) {
     alert("Please fill in Name, Amount, and Date");
-    return;
+    return; //
   }
 
   expenses.push({ name, amount, description, date });
